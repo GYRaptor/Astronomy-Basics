@@ -1,0 +1,347 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background: url('media/stars.jpg') no-repeat center center/cover;
+  width: 100%;
+  overflow-x: hidden;
+}
+html {
+        scroll-behavior: smooth; 
+    }
+
+#bg-video{
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.bg-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(10, 10, 25, 0.4);
+    z-index: -1;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(254, 254, 254, 0);
+    backdrop-filter: blur(80px);
+    z-index: 10;
+    padding: 10px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar ul li{
+    margin: 0 1rem;
+    color: white;
+}
+
+.navbar ul li a:hover{
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700;
+}
+
+
+.content-section{
+    padding: 120px 10%;
+    text-align: center;
+    color: white;
+    font-family: "Trebuchet MS", sans-serif;
+    padding-bottom: 400px;
+    padding-top: 275px;
+}
+
+.content-section h2{
+    /* font-size: 4rem; */
+    margin-bottom: 1rem;
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700;
+    font-size: 7rem;
+    line-height: 200px;
+}
+
+.content-section p{
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    font-size: 1.15rem;
+}
+
+
+/* .visual-cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card{
+    background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  width: 250px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 50px;
+}
+
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.5;
+} */
+         .visual-cards {
+            display: flex;
+            justify-content: center;
+            align-items: stretch; 
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 0 10%; 
+            margin: 3rem auto;
+            max-width: 1200px;
+        }
+
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            width: 300px; 
+            height: 300px; 
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        }
+
+        .card img {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem auto;
+        }
+
+        .card h3 {
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: #ddd;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem; 
+        }
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.7);
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+        .card-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #ffd700; /* Gold border */
+            color: #ffd700; /* Gold text */
+            background-color: transparent;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .card-button:hover {
+            background-color: #ffd700; /* Solid gold on hover */
+            color: #0a0a19; /* Dark text on hover */
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: rgba(255, 215, 0, 0.8); /* Gold color with some transparency */
+            color: #0a0a19; /* Dark blue/black for contrast */
+            border: 1px solid #ffd700;
+            border-radius: 50px; /* Pill shape */
+            text-decoration: none;
+            font-family: "Poppins", sans-serif; /* Match navbar font */
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: #ffd700; /* Solid gold on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+        }
+
+/* ===== Horizontal Scrolling Section Styles ===== */
+
+.scroll-section {
+  width: 100%;
+  padding: 120px 0 100px 0;
+  color: white;
+  text-align: center;
+  font-family: "Trebuchet MS", sans-serif;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.scroll-section h2 {
+  color: #ffd700;
+  text-shadow: 0 0 10px #ffd700;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  line-height: normal;
+  
+}
+
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 2.5rem; /* more space between cards */
+  scroll-behavior: smooth;
+  padding: 0 5vw 1rem 5vw; /* left and right breathing space */
+  width: 100vw; /* full viewport width */
+  box-sizing: border-box;
+  justify-content: flex-start;
+  scroll-padding-left: 5vw;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #ffd700;
+  border-radius: 5px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+.scroll-item {
+  min-width: 300px; /* wider cards */
+  max-width: 350px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  flex-shrink: 0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.scroll-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+}
+
+.scroll-item img {
+  width: 100%;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+
+.scroll-item h3 {
+  color: #ffd700;
+  margin: 1rem 0 0.5rem;
+}
+
+.scroll-item p {
+  color: #ddd;
+  font-size: 0.95rem;
+  padding: 0 1rem 1rem;
+}
+
+/* Subtle fade effect on sides of scroll */
+.scroll-section::before,
+.scroll-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
